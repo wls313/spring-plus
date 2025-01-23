@@ -15,11 +15,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
-@Transactional(readOnly = true)
+//@Transactional(readOnly = true) readOnly 가 true 인 경우에는 Get 을 제외한 다른 행동을 할수없다
 public class TodoService {
 
     private final TodoRepository todoRepository;
